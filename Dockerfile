@@ -12,7 +12,7 @@ mingw-w64-i686-dev mingw-w64-x86-64-dev gcc-mingw-w64-i686-win32 gcc-mingw-w64-x
 mono-runtime libmono-cil-dev
 
 RUN wget https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
-RUN git clone --depth 1 --branch n4.4.3 https://git.ffmpeg.org/ffmpeg.git
+RUN git clone --depth 1 --branch n5.0.2 https://git.ffmpeg.org/ffmpeg.git
 
 RUN wget https://mirror.msys2.org/mingw/mingw32/mingw-w64-i686-aom-3.5.0-1-any.pkg.tar.zst
 RUN wget https://mirror.msys2.org/mingw/mingw32/mingw-w64-i686-dav1d-1.0.0-1-any.pkg.tar.zst
