@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>libFFmpeg-lite.lgpl2.native</id>
+    <version>4.4.3.2</version>
+    <authors>FFmpeg developers</authors>
+    <owners>Nicolas Noble</owners>
+    <projectUrl>https://ffmpeg.org/</projectUrl>
+    <license type="expression">LGPL-2.1-or-later</license>
+    <iconUrl>https://ffmpeg.org//favicon.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Headers, import libraries, and runtime dlls for FFmpeg, LGPL-2.1.</description>
+    <summary>Headers, import libraries, and runtime dlls for FFmpeg, LGPL-2.1.</summary>
+    <tags>FFmpeg native nativepackage</tags>
+  </metadata>
+  <files>
+    <file src="libffmpeg-lite.lgpl2.native.targets" target="build\native" />
+    <file src="ffmpeg-package-lgpl2\build\include\libavcodec\*.*" target="build\native\include\libavcodec" />
+    <file src="ffmpeg-package-lgpl2\build\include\libavdevice\*.*" target="build\native\include\libavdevice" />
+    <file src="ffmpeg-package-lgpl2\build\include\libavfilter\*.*" target="build\native\include\libavfilter" />
+    <file src="ffmpeg-package-lgpl2\build\include\libavformat\*.*" target="build\native\include\libavformat" />
+    <file src="ffmpeg-package-lgpl2\build\include\libavutil\*.*" target="build\native\include\libavutil" />
+    <file src="ffmpeg-package-lgpl2\build\include\libswresample\*.*" target="build\native\include\libswresample" />
+    <file src="ffmpeg-package-lgpl2\build\include\libswscale\*.*" target="build\native\include\libswscale" />
+    <file src="ffmpeg-package-lgpl2\build\native\bin\Win32\*.*" target="build\native\bin\Win32" />
+    <file src="ffmpeg-package-lgpl2\build\native\lib\Win32\*.*" target="build\native\lib\Win32" />
+    <file src="ffmpeg-package-lgpl2\build\native\bin\x64\*.*" target="build\native\bin\x64" />
+    <file src="ffmpeg-package-lgpl2\build\native\lib\x64\*.*" target="build\native\lib\x64" />
+  </files>
+</package>
