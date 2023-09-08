@@ -12,7 +12,7 @@ mingw-w64-i686-dev mingw-w64-x86-64-dev gcc-mingw-w64-i686-win32 gcc-mingw-w64-x
 mono-runtime libmono-cil-dev
 
 RUN wget https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
-RUN git clone --depth 1 --branch n5.1.2 https://git.ffmpeg.org/ffmpeg.git
+RUN git clone --depth 1 --branch n5.1.3 https://git.ffmpeg.org/ffmpeg.git
 
 RUN wget https://mirror.msys2.org/mingw/mingw32/mingw-w64-i686-aom-3.5.0-1-any.pkg.tar.zst
 RUN wget https://mirror.msys2.org/mingw/mingw32/mingw-w64-i686-dav1d-1.0.0-1-any.pkg.tar.zst
@@ -40,7 +40,7 @@ RUN wget https://mirror.msys2.org/mingw/mingw64/mingw-w64-x86_64-libwebp-1.2.4-2
 RUN wget https://mirror.msys2.org/mingw/mingw64/mingw-w64-x86_64-shine-3.1.1-1-any.pkg.tar.xz
 RUN wget https://mirror.msys2.org/mingw/mingw64/mingw-w64-x86_64-speex-1.2.1-1-any.pkg.tar.zst
 
-RUN wget https://zlib.net/zlib-1.2.13.tar.gz
+RUN wget https://zlib.net/zlib-1.3.tar.gz
 
 RUN mkdir msys2
 WORKDIR /msys2
@@ -49,8 +49,8 @@ RUN for f in ../*.tar.xz ; do tar xvf $f ; done
 RUN find . -name *dll* -exec rm {} \;
 RUN cp -rv mingw32/* /usr/i686-w64-mingw32
 RUN cp -rv mingw64/* /usr/x86_64-w64-mingw32
-RUN tar xvfz ../zlib-1.2.13.tar.gz
-WORKDIR /msys2/zlib-1.2.13
+RUN tar xvfz ../zlib-1.3.tar.gz
+WORKDIR /msys2/zlib-1.3
 
 RUN \
 make -f win32/Makefile.gcc \
@@ -62,9 +62,9 @@ PREFIX=i686-w64-mingw32- \
 install
 
 WORKDIR /msys2
-RUN rm -rf zlib-1.2.13
-RUN tar xvfz ../zlib-1.2.13.tar.gz
-WORKDIR /msys2/zlib-1.2.13
+RUN rm -rf zlib-1.3
+RUN tar xvfz ../zlib-1.3.tar.gz
+WORKDIR /msys2/zlib-1.3
 
 RUN \
 make -f win32/Makefile.gcc \

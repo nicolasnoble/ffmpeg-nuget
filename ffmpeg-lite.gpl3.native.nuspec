@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>libFFmpeg-lite.gpl3.native</id>
-    <version>5.1.2.2</version>
+    <version>5.1.3</version>
     <authors>FFmpeg developers</authors>
     <owners>Nicolas Noble</owners>
     <projectUrl>https://ffmpeg.org/</projectUrl>
